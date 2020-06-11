@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мултимедия в Интернет</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <nav>
+      <h1>Мултимедия в Интернет</h1>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./music.html">Music and video</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="edit-section">
+        <label for="effect">Choose an effect:</label>
+        <select name="effect" class="effect">
+          <option value="grayscale">grayscale</option>
+          <option value="invert">invert</option>
+          <option value="blur">blur</option>
+        </select>
+        <div class="slidecontainer">
+          <p>Increase effect strength:</p>
+          <input type="range" min="1" max="100" value="50" />
+          <span class="effectValue">50%</span>
+        </div>
+        <div class="front-desc">
+          <h2>
+            Hover over image for
+            <span class="effect-name">grayscale</span> effect
+          </h2>
+        </div>
+      </div>
+      <div class="slider">
+        <img src="" alt="image-missing" />
+      </div>
+      <button class="prev">Previous</button>
+      <button class="next">Next</button>
+    </div>
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
