@@ -18,15 +18,16 @@ function getRenderData() {
   )
     .then((res) => res.json())
     .then((photos) => {
-      photos.map((photo) => {
-        let url = photo.urls.regular;
-        let alt = photo.alt_description;
-        galleryContainer.innerHTML += `
+      if (photos)
+        photos.map((photo) => {
+          let url = photo.urls.regular;
+          let alt = photo.alt_description;
+          galleryContainer.innerHTML += `
       <div class="gallery-item">
           <div class="gallery-content">
           <a href="${url}"><img src="${url}" alt="${alt}" /></a>
           </div>
       </div>`;
-      });
+        });
     });
 }
